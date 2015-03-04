@@ -1,0 +1,76 @@
+press the h and l keys to move forwards and backwards in this sentence. Then press the j key to move down to the next sentence.
+
+press the k key to move back up to the previous sentence, and then j again to come back down to the next one.
+
+press the $ key to move to the end of this sentence. Then press 0 (zero) to go to the beginning.
+
+press the w key in this sentence to move from word to word. you can also use b (beginning of word) and e (end of word).
+
+now try typinhg 5w. this means move forward 5 words. you can put a number before any command to do it that many times. try it out.
+
+please press i to enter insert mode and insert the word please at the beginning of this sentence. when you are done entering text, hit the <esc> key.
+
+put your cursor on this line and press the o key. This creates a new line and puts you in insert mode. create a new line and enter your name.
+steve
+
+
+press, in sequence, <esc> : w <enter> to save your work. If you want to save and exit you would enter :x
+
+Remember that you can put a number in front of any command to do it that many times. 
+Create a new line and type in 50i-<esc> and see what happens.
+
+
+Now create a line of text that outputs your first name 10 times.
+
+
+let's find some characters with the f key. put the cursor at the beginning of the next line and type fw to find the w characters.
+
+how much wood would a woodchuck chuck if a woodchuck could chuck wood?
+
+now try to find the next occurance of the word wood with the * character.
+put your cursor on the word wood and use * and # to move back and forth between the two matching words.
+
+now let's find the word wood, but first let's move to the top of the file with gg. Then press G to move to the bottom.
+
+when you're at the bottom of the file type /wood. This will find the first matching pattern. to cycle through all matches
+you will use the n (next occurance) and N (previous occurance) keys.
+
+next, you're going to start deleting some characters. go to the next line and put your cursor on top of the character that's out of place.
+then press the x key to delete it.
+
+terrific
+
+now use the X key to delete the character to the left of the incorrect character below (equivalent to the backspace key)
+
+fantas*tic
+
+you can use the r key to replace a letter.
+
+incredible
+
+next up is the d key which is for deleting larger chunks of text. in the next line, delete the incorrect word with dw (delete word).
+
+suzie sells seashells by the seashore.
+
+you can use dd to delete entire lines. delete the next three sentences.
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+Donec a diam lectus.
+Sed sit amet ipsum mauris.
+
+You can repeat your last command with the . key. Delete the first two words in the next sentence (2dw) and then repeat that until the entire sentence is gone.
+
+The body of clouded mind could please even the most demanding follower of Freud.
+
+To page up type <ctrl>u and to page down <ctrl>d
+
+your assignment is to write, in vim, a javascript program that makes a christmas tree appear in the terminal, whose height is variable.
+       *
+      ***
+     *****
+    *******
+   *********
+  ***********
+ *************
+***************
+
