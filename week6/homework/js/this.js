@@ -3,13 +3,28 @@ function foo (something) {
     return this.a + something;
 }
 
+var bar = function(first) {
+  return foo(first);
+};
+
+var a = 10;
+
 var obj = {
-    a: 2
+    a: 5,
+    bar: bar
 };
 
-var bar = function() {
-    return foo.apply( obj, arguments );
-};
-
-var b = bar( );
+var b = obj.bar( 3 );
 console.log( b );
+
+
+
+
+
+
+
+
+
+
+
+
