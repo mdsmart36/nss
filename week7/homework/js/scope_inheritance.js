@@ -38,6 +38,9 @@
   5. Employee must inherit Department properties
   6. Manager must inherit Department properties
   7. Department must inherit Company properties
+  8. Create a global variable that holds your name and have
+      each type of object have a property named `creator`
+      with the value of that variable.
 
 */
 
