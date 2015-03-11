@@ -3,7 +3,7 @@
 
   You are an HR manager and need a way to keep
   track of employees, which department they work
-  in, and other staistical information. You need
+  in, and other statistical information. You need
   to build a simple JavaScript program that...
 
   1. Defines a Company, a Department, a Manager,
