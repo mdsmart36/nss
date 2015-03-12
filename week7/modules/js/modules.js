@@ -1,27 +1,59 @@
+// Literal object module
+
 var basicCarModule = {
+
   color: "blue",
   size: "sedan",
-  price: 0,
 
   options: {
-    powerSteering: true,
-    sunroof: true,
-    heatedSeats: false,
-    racingStripes: false
+    sunRoof: true,
+    racingStripes: false,
+    spoiler: false,
+    leatherSeats: true,
+    heatedSeats: true,
+    underLighting: false
   },
 
-  setPrice: function (newPrice) {
-    this.price = newPrice;
+  setSpoilerOption: function (spoiler) {
+    this.options.spoiler = spoiler;
   },
 
-  setColor: function (newColor) {
-    this.color = newColor;
+  setColor: function (color) {
+    this.color = color;
+  },
+
+  setOptions: function (options) {
+    this.options = options;
   }
 
 }
 
-console.log(basicCarModule);
+console.log('basicCarModule', basicCarModule);
+basicCarModule.setColor("green");
+console.log('basicCarModule', basicCarModule);
 
-basicCarModule.setColor("red");
 
-console.log(basicCarModule);
+
+
+// IIFE
+// Immediately invoked function expression
+// For private state
+
+
+var module = (function () {
+  var color = "blue";
+
+  return {
+    a: 1,
+    getColor: function () {
+      return color;
+    },
+    setColor: function (newColor) {
+      color = newColor;
+    }
+  };
+
+})();
+
+module.setColor("green");
+console.log(module.getColor());
