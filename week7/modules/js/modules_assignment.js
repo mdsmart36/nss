@@ -2,9 +2,9 @@
   .....  YOUR MISSION  .....
 
   1. Make a JavaScript module that has properties
-      that describe your favorite food. Once
+      that describe your favorite food. One
       property must be an array that will hold
-      incredients.
+      ingredients.
 
   2. Create a method that allows you to add
       ingredients for your favorite food.
@@ -15,6 +15,18 @@
 */
 
 var favoriteFood = {
+	name: "Brunswick Stew",
+	type: "comfort food",
+	ingredients: [],
+	temperature: "warm",
+	addIngredient: function(ingredient) {
+		this.ingredients.push(ingredient);
+	},
+	addIngredients: function()
+};
 
-}
+var myIngredients = ["pickles", "ham", "salt"];
+favoriteFood.addIngredient(myIngredients);
+
+console.log(favoriteFood.ingredients);
 
