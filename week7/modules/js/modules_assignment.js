@@ -15,6 +15,7 @@
 */
 
 var favoriteFood = {
+<<<<<<< HEAD
 	name: "Brunswick Stew",
 	type: "comfort food",
 	ingredients: [],
@@ -29,4 +30,25 @@ var myIngredients = ["pickles", "ham", "salt"];
 favoriteFood.addIngredient(myIngredients);
 
 console.log(favoriteFood.ingredients);
+=======
+  name: "lasagna",
+  layers: 5,
+  spicy: true,
+  size: "xxx-large",
+  temperature: "hot",
 
+  ingredients: [],
+
+  addIngredient: function (ingredient) {
+    this.ingredients.push(ingredient);
+  }
+}
+>>>>>>> a1819c2e680fbf4f29f9160a16439de137c8af49
+
+var myIngredients = ["pasta", "tomatoes", "ricotta", "parmesan"]
+
+myIngredients.map(function (ingredient) {
+  favoriteFood.addIngredient(ingredient);
+});
+
+console.log(favoriteFood);

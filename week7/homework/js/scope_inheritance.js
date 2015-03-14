@@ -35,7 +35,7 @@
         c. setManager - Assign a Manager to an employee
 
 
-  5. Employee must inherit Department properties
+  5. Employee must inherit from Department properties
   6. Manager must inherit Department properties
   7. Department must inherit Company properties
   8. Create a global variable that holds your name and have
@@ -44,22 +44,34 @@
 
 */
 
+var creator = "Steve";
+
 // Define the Company function
 function Company (name) {
   this.company = name;
+  this.creator = creator;
 }
 
 // Define the Department function
 function Department (name) {
   this.department = name;
 }
+Department.prototype = new Company("Lonely Planet");
 
 // Define the Manager function
-
+function Manager (first, last) {
+  this.firstName = first;
+  this.lastName = last;
+}
+Manager.prototype = new Department("Software");
 
 // Define the Employee function.
-function Employee () {
-  // this.firstName = first;
+function Employee (first, last, age, status, salary) {
+  this.first = first;
+  this.last = last;
+  this.age = age;
+  this.status = status;
+  this.salary = salary;
 }
 Employee.prototype = new Department("Software");
 
@@ -71,11 +83,39 @@ Employee.prototype.setDepartment = function (department) {
   this.department = department;
 }
 
-var Steve = new Employee("Steve", "Brownlee", "Age", "Married", "1000000");
+Employee.prototype.getHourlyWage = function () {
+  return parseInt(this.salary) / 2080;
+}
+
+
+
+
+Employee.prototype.setManager = function (first, last) {
+  this.manager = new Manager(first, last);
+}
+
+
+
+var Steve = new Employee("Steve", "Brownlee", "Age", "Married", 1000000);
 
 // Change the department for an employee to override the default
 Steve.setDepartment("Accounting");
+Steve.setManager("John", "Wark");
+Steve.setManager("Dave", "Nolan");
+Steve.setManager("Space", "Ghost");
+
+
+
 
 
 // Show the employee's properties
 console.log(Steve);
+
+
+
+
+
+
+
+
+
