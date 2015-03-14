@@ -1,6 +1,7 @@
 div {
   padding: 20px;
   font-size: 40px;
+  border: 1px dotted black;
 }
 
 .red {
